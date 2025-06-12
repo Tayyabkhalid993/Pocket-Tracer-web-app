@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
+  CardDescription,
   CardTitle,
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -46,10 +46,10 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
 
   return (
     <div className={cn('flex flex-col gap-6', className)} {...props}>
-      <Card>
+      <Card className='border-none shadow-none bg-transparent '>
         <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
-          <CardDescription>Enter your email below to login to your account</CardDescription>
+          <CardTitle className="text-2xl text-[#0575E6]">Hi Again!</CardTitle>
+            <CardDescription className='md:hidden text-[#0575E6]'>Welcome back to Pocket Tracer</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin}>
@@ -57,6 +57,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
+                className=''
                   id="email"
                   type="email"
                   placeholder="m@example.com"
@@ -70,7 +71,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
                   <Label htmlFor="password">Password</Label>
                   <Link
                     href="/auth/forgot-password"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                    className="ml-auto inline-block text-sm hover:text-[#0575E6] duration-300 hover:underline transition-all ease"
                   >
                     Forgot your password?
                   </Link>
@@ -84,13 +85,13 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
                 />
               </div>
               {error && <p className="text-sm text-red-500">{error}</p>}
-              <Button type="submit" className="w-full" disabled={isLoading}>
+              <Button type="submit" className="h-10 w-full bg-[#0575E6] font-bold transition-colors duration-300" disabled={isLoading}>
                 {isLoading ? 'Logging in...' : 'Login'}
               </Button>
             </div>
             <div className="mt-4 text-center text-sm">
               Don&apos;t have an account?{' '}
-              <Link href="/auth/sign-up" className="underline underline-offset-4">
+              <Link href="/auth/sign-up" className="underline underline-offset-4 hover:text-[#0575E6] duration-300 transition-all ease-in-out">
                 Sign up
               </Link>
             </div>

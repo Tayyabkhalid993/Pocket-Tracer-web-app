@@ -1,30 +1,62 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+// app/signup/success/page.tsx
+'use client'; // Required for interactivity
 
-export default function Page() {
+import { CheckCircle2, RefreshCw, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import { createClient } from "../../../lib/client";
+import { toast } from "sonner"; // or 'react-hot-toast'
+
+export default function SignupSuccess() {
+  const [isResending, setIsResending] = useState(false);
+  const supabase = createClient(); // Initialize Supabase client
+
+  const handleResend = async () => {
+    setIsResending(true);
+    try {
+      const { error } = await supabase.auth.resend({
+        type: 'signup',
+        email: 'user@example.com' // Replace with actual email from store/context
+      });
+      
+      if (error) throw error;
+      toast.success('Confirmation email sent!');
+    } catch (error) {
+      toast.error('Failed to resend. Please try again.');
+    } finally {
+      setIsResending(false);
+    }
+  };
+
   return (
-    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
-      <div className="w-full max-w-sm">
-        <div className="flex flex-col gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">Thank you for signing up!</CardTitle>
-              <CardDescription>Check your email to confirm</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">
-                You&apos;ve successfully signed up. Please check your email to confirm your account
-                before signing in.
-              </p>
-            </CardContent>
-          </Card>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        {/* Branding Header */}
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-blue-600">
+            <span className="bg-blue-100 px-2 py-1 rounded-lg">Pocket Tracer</span>
+          </h1>
+          <p className="mt-1 text-sm text-gray-500">Track every penny, effortlessly</p>
+        </div>
+
+        {/* Success Card */}
+        <div className="mt-8 bg-white p-8 shadow-lg rounded-xl border border-blue-100">
+          <div className="flex flex-col items-center">
+            <CheckCircle2 className="h-14 w-14 text-green-500 mb-4 stroke-[1.5]" />
+            
+            <h2 className="text-2xl font-bold text-gray-800 text-center">
+              Your expense journey begins!
+            </h2>
+            
+            <p className="mt-3 text-gray-600 text-center">
+              We've sent a confirmation link to your email. 
+              <span className="block font-medium text-blue-600 mt-1">
+                Verify to unlock full access.
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
