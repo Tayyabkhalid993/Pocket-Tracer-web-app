@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+.text-blue {
+    color: var(--lite-blue);
+  }
+
   .bg-custom-gradient {
     background: linear-gradient(175deg, var(--lite-blue) 0%, var(--dark-blue) 100%);
   }
