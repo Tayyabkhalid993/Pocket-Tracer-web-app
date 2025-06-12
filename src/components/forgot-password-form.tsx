@@ -59,7 +59,7 @@ export function ForgotPasswordForm({ className, ...props }: React.ComponentProps
       ) : (
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Reset Your Password</CardTitle>
+            <CardTitle className="text-2xl text-blue">Back on Track</CardTitle>
             <CardDescription>
               Type in your email and we&apos;ll send you a link to reset your password
             </CardDescription>
@@ -79,13 +79,13 @@ export function ForgotPasswordForm({ className, ...props }: React.ComponentProps
                   />
                 </div>
                 {error && <p className="text-sm text-red-500">{error}</p>}
-                <Button type="submit" className="w-full" disabled={isLoading}>
+                <Button type="submit" className="w-full bg-[#0575E6]" disabled={isLoading}>
                   {isLoading ? 'Sending...' : 'Send reset email'}
                 </Button>
               </div>
               <div className="mt-4 text-center text-sm">
                 Already have an account?{' '}
-                <Link href="/auth/login" className="underline underline-offset-4">
+                <Link href="/auth/login" className="underline underline-offset-4 transition-all ease-in-out duration-300 hover:text-[#0575E6]">
                   Login
                 </Link>
               </div>
