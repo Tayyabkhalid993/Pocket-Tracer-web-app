@@ -1,5 +1,7 @@
 import { LoginForm } from '@/components/login-form'
 import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Log In"
@@ -7,7 +9,20 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="h-screen w-full items-center flex justify-center overflow-hidden md:bg-white md:grid grid-cols-5">
+    <>
+     {/* White Logo */}
+    <div className="absolute hidden top-0 left-0 z-50 p-2 md:p-4 md:flex w-full">
+    <Link href={"/"}><Image src={"/PocketTracerWhite.png"} width={200} height={200} alt='Pocket Tracer Logo'></Image></Link>
+    </div>
+
+
+    {/*Blue Logo */}
+    <div className="absolute top-0 left-0 z-50 p-2 md:hidden flex w-full">
+    <Link href={"/"}><Image src={"/PocketTracerBlue.png"} width={200} height={200} alt='Pocket Tracer Logo'></Image></Link>
+    </div>
+    
+    
+    <section className="h-screen w-full items-center flex justify-center overflow-hidden md:bg-white md:grid grid-cols-5">
       <div className=" bg-custom-gradient h-screen col-span-3 relative overflow-hidden">
         <div className='hidden h-screen md:flex flex-col justify-center items-center text-center p-12 text-white'>
           <div className="max-w-md">
@@ -46,6 +61,7 @@ export default function Page() {
           <LoginForm />
         </div>
       </div>
-    </div>
+    </section>
+    </>
   )
 }

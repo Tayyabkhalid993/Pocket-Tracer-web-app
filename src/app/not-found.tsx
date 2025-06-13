@@ -1,6 +1,8 @@
 // app/not-found.tsx
-import { AlertTriangle, Home, ArrowRight } from "lucide-react";
-import Link from "next/link";
+
+export const metadata = {
+  title : "Not Found"
+}
 
 export default function NotFound() {
   return (
