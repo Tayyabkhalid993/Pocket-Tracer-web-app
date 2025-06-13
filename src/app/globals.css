@@ -3,6 +3,30 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.underline-text {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  display: inline-block; /* Added to contain the underline */
+}
+
+.underline-text::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.underline-text:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
 .text-blue {
     color: var(--lite-blue);
