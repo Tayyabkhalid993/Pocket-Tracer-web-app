@@ -1,4 +1,4 @@
-import TextPressure from "@/components/scatter-text";
+import TextPressure from "@/components/pressure-text";
 import Image from "next/image";
 import SplitText from "@/components/split-text";
 import Link from "next/link";
@@ -71,6 +71,119 @@ export default function Home() {
       </section>
 
 
+
+
+
+
+
+
+      {/* About Us */}
+
+
+
+<section id="about" className="bg-slate-50 text-gray-800 py-16 px-4 md:px-20 scroll-mt-24">
+  <div className="max-w-5xl mx-auto">
+    {/* Heading */}
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+      About Pocket Tracer
+    </h2>
+
+    {/* Subtitle */}
+    <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+      Empowering You to Understand Your Finances – Simply and Freely.
+    </p>
+
+    {/* Mission & Purpose */}
+    <div className="space-y-6 text-lg text-gray-700">
+      <p>
+        <strong>Pocket Tracer</strong> is a free, user-friendly financial tracking app built to help individuals and small businesses manage their income and expenses with clarity. It includes features like dashboards, vouchers (CPV, CRV, BPV, BRV, JV), and report generation — all at no cost.
+      </p>
+
+      <p>
+        Our mission is to make financial clarity accessible to everyone — whether you’re a student learning to budget or a small business handling daily transactions. Pocket Tracer bridges the gap between simplicity and real-world accounting.
+      </p>
+
+      <p>
+        With visual insights, printable reports, and real accounting practices built-in, Pocket Tracer is your go-to tool for smart, simple finance management.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+      {/* Features */}
+
+
+
+<section id="features" className="bg-white text-gray-800 py-16 px-4 md:px-20 scroll-mt-24">
+  <div className="max-w-6xl mx-auto">
+    {/* Heading */}
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+      Why Choose Pocket Tracer?
+    </h2>
+    <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+      Powerful features designed to simplify your financial journey — all for free.
+    </p>
+
+    {/* Feature Cards */}
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Feature 1 */}
+      <div className="bg-slate-50 rounded-xl p-6 shadow hover:shadow-md transition">
+        <h3 className="text-xl font-semibold mb-2">Voucher-Based Accounting</h3>
+        <p className="text-gray-600">
+          Manage CPV, CRV, BPV, BRV, and JV entries with ease using real accounting practices.
+        </p>
+      </div>
+
+      {/* Feature 2 */}
+      <div className="bg-slate-50 rounded-xl p-6 shadow hover:shadow-md transition">
+        <h3 className="text-xl font-semibold mb-2">Visual Dashboards</h3>
+        <p className="text-gray-600">
+          Instantly see where your money is coming from and going to with beautiful charts.
+        </p>
+      </div>
+
+      {/* Feature 3 */}
+      <div className="bg-slate-50 rounded-xl p-6 shadow hover:shadow-md transition">
+        <h3 className="text-xl font-semibold mb-2">Detailed Reporting</h3>
+        <p className="text-gray-600">
+          Generate, filter, and export comprehensive reports for both expenses and income.
+        </p>
+      </div>
+
+      {/* Feature 4 */}
+      <div className="bg-slate-50 rounded-xl p-6 shadow hover:shadow-md transition">
+        <h3 className="text-xl font-semibold mb-2">100% Free, Forever</h3>
+        <p className="text-gray-600">
+          No subscriptions, no hidden fees — Pocket Tracer is completely free to use.
+        </p>
+      </div>
+
+      {/* Feature 5 */}
+      <div className="bg-slate-50 rounded-xl p-6 shadow hover:shadow-md transition">
+        <h3 className="text-xl font-semibold mb-2">Privacy-Focused</h3>
+        <p className="text-gray-600">
+          Your financial data stays safe. We never sell or share your information.
+        </p>
+      </div>
+
+      {/* Feature 6 */}
+      <div className="bg-slate-50 rounded-xl p-6 shadow hover:shadow-md transition">
+        <h3 className="text-xl font-semibold mb-2">Simple & User-Friendly</h3>
+        <p className="text-gray-600">
+          Clean interface built for beginners, yet powerful enough for businesses.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
