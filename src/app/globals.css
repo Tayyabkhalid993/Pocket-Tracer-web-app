@@ -63,6 +63,9 @@ html.lenis body {
 .text-blue {
     color: var(--lite-blue);
   }
+  .text-dark-blue{
+    color: var(--dark-blue);
+  }
 
   .bg-custom-gradient {
     background: linear-gradient(175deg, var(--lite-blue) 0%, var(--dark-blue) 100%);

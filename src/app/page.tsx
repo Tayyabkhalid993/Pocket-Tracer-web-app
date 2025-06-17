@@ -1,6 +1,7 @@
 import TextPressure from "@/components/pressure-text";
 import Image from "next/image";
 import SplitText from "@/components/split-text";
+import { TextEffectOne } from 'react-text-animate'
 import Link from "next/link";
 import Silk from '@/components/silk-background';
 
@@ -8,7 +9,7 @@ export default function Home() {
 
 
   return (
-    <div className="">
+    <div className="scroll-smooth">
 
       {/* background-animation */}
       <div className="absolute inset-0 z-[-1]">
@@ -31,7 +32,7 @@ export default function Home() {
           <div>
             <ul className="flex justify-center items-center gap-3">
               <li><Link className="underline-text" href={"/"}>Home</Link></li>
-              <li><Link className="underline-text" href={"/"}>About</Link></li>
+              <li><Link className="underline-text" href={"/#about"}>About</Link></li>
               <li><Link className="underline-text" href={"/"}>Features</Link></li>
               <li><Link className="underline-text" href={"/"}>FAQ</Link></li>
               <li><Link className="underline-text" href={"/"}>Contact</Link></li>
@@ -51,22 +52,25 @@ export default function Home() {
       <section className="flex flex-col justify-center items-center h-screen text-center text-white">
 
 
-        <SplitText
+        {/* <SplitText
           text="Stop Guessing. Start Tracking."
           className="text-7xl font-semibold text-center pb-4"
-          delay={100}
+          delay={400}
           duration={0.3}
           ease="power3.out"
-          splitType="chars"
+          splitType="words"
           from={{ opacity: 0, y: 40 }}
           to={{ opacity: 1, y: 0 }}
           threshold={0.1}
           rootMargin="-100px"
           textAlign="center"
-        />
+        /> */}
+
+         <TextEffectOne elementVisibilityAmount={0.1} lineHeight={1.2} text="Stop Guessing. Start Tracking." 
+          className="text-7xl font-semibold text-center" />
 
         <h1 className="text-7xl"></h1>
-        <p className="w-2xl mt-10 text-xl">Stop guessing and start tracking with confidence. Pocket Tracer transforms your financial data into clear visuals and professional reports, so you always know where your money stands.</p>
+        <p className="max-w-2xl mt-10 mb-5 text-xl">Stop guessing and start tracking with confidence. Pocket Tracer transforms your financial data into clear visuals and professional reports, so you always know where your money stands.</p>
         <p className="font-bold bg-[#8480fd] text-[#fff] rounded px-2">No accounting degree required.</p>
       </section>
 
@@ -82,27 +86,25 @@ export default function Home() {
 
 
 <section id="about" className="bg-slate-50 text-gray-800 py-16 px-4 md:px-20 scroll-mt-24">
-  <div className="max-w-5xl mx-auto">
+  <div className="max-w-7xl mx-auto">
     {/* Heading */}
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-      About Pocket Tracer
+
+     <p className="text-7xl text-blue">About</p>
+    <h2 className="text-3xl text-blue md:text-7xl mb-16">
+       Pocket Tracer
     </h2>
 
     {/* Subtitle */}
-    <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+    {/* <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
       Empowering You to Understand Your Finances – Simply and Freely.
-    </p>
+    </p> */}
 
     {/* Mission & Purpose */}
-    <div className="space-y-6 text-lg text-gray-700">
-      <p>
-        <strong>Pocket Tracer</strong> is a free, user-friendly financial tracking app built to help individuals and small businesses manage their income and expenses with clarity. It includes features like dashboards, vouchers (CPV, CRV, BPV, BRV, JV), and report generation — all at no cost.
+    <div className="space-y-6 text-3xl text-gray-700">
+      <p className="">
+        <strong>Pocket Tracer</strong> is a free, user-friendly financial tracking app built to help individuals and small businesses manage their income and expenses with clarity.  Our mission is to make financial clarity accessible to everyone — whether you’re a student learning to budget or a small business handling daily transactions. Pocket Tracer bridges the gap between simplicity and real-world accounting.
       </p>
-
-      <p>
-        Our mission is to make financial clarity accessible to everyone — whether you’re a student learning to budget or a small business handling daily transactions. Pocket Tracer bridges the gap between simplicity and real-world accounting.
-      </p>
-
+      <br />
       <p>
         With visual insights, printable reports, and real accounting practices built-in, Pocket Tracer is your go-to tool for smart, simple finance management.
       </p>
