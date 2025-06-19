@@ -36,9 +36,9 @@ export default function Home() {
             <ul className="flex justify-center items-center gap-3">
               <li><Link className="underline-text" href={"/"}>Home</Link></li>
               <li><Link className="underline-text" href={"/#about"}>About</Link></li>
-              <li><Link className="underline-text" href={"/"}>Features</Link></li>
-              <li><Link className="underline-text" href={"/"}>FAQ</Link></li>
-              <li><Link className="underline-text" href={"/"}>Contact</Link></li>
+              <li><Link className="underline-text" href={"/#features"}>Features</Link></li>
+              <li><Link className="underline-text" href={"/#faqs"}>FAQs</Link></li>
+              <li><Link className="underline-text" href={"/#contact"}>Contact</Link></li>
             </ul>
           </div>
           <div className="flex justify-center gap-3">
