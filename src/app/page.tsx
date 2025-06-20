@@ -12,6 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { TextRevealAnimation } from "@/components/text-reveal-animation";
 
 
 export default function Home() {
@@ -179,76 +180,7 @@ export default function Home() {
             </AccordionItem>
           </Accordion>
         </div>
-      </section>
-
-
-
-
-    {/* Footer */}
-
-
-          
-          <footer className="bg-custom-gradient text-white">
-  <div className="grid w-full place-items-center overflow-y-hidden p-4 sm:grid-rows-4 md:grid-rows-4">
-    {/* <!-- Intro Message --> */}
-    <section aria-labelledby="footer-message">
-      <h2 id="footer-message" className="sr-only">Footer Message</h2>
-      <p className="text-center text-[clamp(2rem,6vw,8rem)]">Your wallet's new best friend.</p>
-    </section>
-
-    {/* <!-- Navigation Columns --> */}
-    <nav className="mt-8 grid w-full max-w-7xl grid-cols-1 gap-6 px-4 sm:row-span-2 sm:grid-cols-2 sm:text-center md:row-span-1 md:grid-cols-4" aria-label="Footer Navigation">
-      <div>
-        <h3 className="mb-2 text-lg font-extrabold">MENU</h3>
-        <ul className="space-y-1 font-medium">
-          <li><Link className="underline-text" href="/">Home</Link></li>
-          <li><Link className="underline-text" href="/#about">About</Link></li>
-          <li><Link className="underline-text" href="/#features">Features</Link></li>
-          <li><Link className="underline-text" href="/#faqs">FAQs</Link></li>
-        </ul>
-      </div>
-      <div>
-        <h3 className="mb-2 text-lg font-extrabold">SOCIAL</h3>
-        <ul className="space-y-1 font-medium">
-          <li><Link className="underline-text" href="https://www.linkedin.com/in/muhammad-tayyab-khalid-tayyabk993?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</Link></li>
-          <li><Link className="underline-text" href="https://x.com/TayyabK993?t=8Dc8W8dJYIyE3EaYovJEVw&s=09" target="_blank">X</Link></li>
-          <li><Link className="underline-text" href="https://www.facebook.com/tayyab.khalid.5070" target="_blank">Facebook</Link></li>
-          <li><Link className="underline-text" href="https://www.tiktok.com/@tayyabkhalid993?_t=ZS-8xIuhdjN6KV&_r=1" target="_blank">Tiktok</Link></li>
-        </ul>
-      </div>
-      <div>
-        <h3 className="mb-2 text-lg font-extrabold">CONTRIBUTOR</h3>
-        <ul className="space-y-1 font-medium">
-          <li><Link className="underline-text" href="http://www.linkedin.com/in/Aman-ACCA" target="_blank">LinkedIn</Link></li>
-          <li><Link className="underline-text" href="https://x.com/SpeechlessAman?t=W758cbMDgZB984HGF1sl7w&s=09" target="_blank">X</Link></li>
-        </ul>
-      </div>
-      <div>
-        <h3 className="mb-2 text-lg font-extrabold">REACH OUT</h3>
-        <ul className="space-y-1 font-medium">
-          <li>
-            <Link className="underline-text" href="mailto:someone@example.com" aria-label="Send us an email">contact@pockettracer.com</Link>
-          </li>
-          <li>
-            <Link className="underline-text" href="tel:+923156603419" aria-label="Call our phone number">+92 315 6603419</Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    {/* <!-- Branding and Footer Note --> */}
-    <section className="row-span-2 mt-12 text-center">
-      <h1 className="w-full text-[clamp(3rem,14vw,15rem)]">Pocket Tracer</h1>
-      <p className="h-0.5 bg-black/95"></p>
-      <p className="mt-4 text-lg">© 2025 Pocket Tracer | All rights reserved.</p>
-    </section>
-  </div>
-</footer>
-
-
-
-{/* 
-      <div style={{position: 'relative', height: '250px', padding:"20px"}}>
+        {/* <div style={{position: 'relative', height: '250px', padding:"20px"}} className="mx-auto mt-10 max-w-7xl">
   <TextPressure
     text="Join us!"
     flex={true}
@@ -262,6 +194,75 @@ export default function Home() {
     minFontSize={36}
   />
 </div> */}
+      </section>
+
+
+
+
+
+      {/* Footer */}
+
+
+
+      <footer className="bg-custom-gradient text-white">
+        <div className="grid w-full place-items-center overflow-y-hidden p-4 sm:grid-rows-4 md:grid-rows-4">
+          {/* <!-- Intro Message --> */}
+          <section aria-labelledby="footer-message">
+            <h2 id="footer-message" className="sr-only">Footer Message</h2>
+            <p className="text-center text-[clamp(2rem,6vw,8rem)]">Your wallet's new best friend.</p>
+          </section>
+
+          {/* <!-- Navigation Columns --> */}
+          <nav className="mt-8 grid w-full max-w-7xl grid-cols-1 gap-6 px-4 sm:row-span-2 sm:grid-cols-2 sm:text-center md:row-span-1 md:grid-cols-4" aria-label="Footer Navigation">
+            <div>
+              <h3 className="mb-2 text-lg font-extrabold">MENU</h3>
+              <ul className="space-y-1 font-medium">
+                <li><Link className="underline-text" href="/">Home</Link></li>
+                <li><Link className="underline-text" href="/#about">About</Link></li>
+                <li><Link className="underline-text" href="/#features">Features</Link></li>
+                <li><Link className="underline-text" href="/#faqs">FAQs</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-2 text-lg font-extrabold">SOCIAL</h3>
+              <ul className="space-y-1 font-medium">
+                <li><Link className="underline-text" href="https://www.linkedin.com/in/muhammad-tayyab-khalid-tayyabk993?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</Link></li>
+                <li><Link className="underline-text" href="https://x.com/TayyabK993?t=8Dc8W8dJYIyE3EaYovJEVw&s=09" target="_blank">X</Link></li>
+                <li><Link className="underline-text" href="https://www.facebook.com/tayyab.khalid.5070" target="_blank">Facebook</Link></li>
+                <li><Link className="underline-text" href="https://www.tiktok.com/@tayyabkhalid993?_t=ZS-8xIuhdjN6KV&_r=1" target="_blank">Tiktok</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-2 text-lg font-extrabold">CONTRIBUTOR</h3>
+              <ul className="space-y-1 font-medium">
+                <li><Link className="underline-text" href="http://www.linkedin.com/in/Aman-ACCA" target="_blank">LinkedIn</Link></li>
+                <li><Link className="underline-text" href="https://x.com/SpeechlessAman?t=W758cbMDgZB984HGF1sl7w&s=09" target="_blank">X</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-2 text-lg font-extrabold">REACH OUT</h3>
+              <ul className="space-y-1 font-medium">
+                <li>
+                  <Link className="underline-text" href="mailto:someone@example.com" aria-label="Send us an email">contact@pockettracer.com</Link>
+                </li>
+                <li>
+                  <Link className="underline-text" href="tel:+923156603419" aria-label="Call our phone number">+92 315 6603419</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          {/* <!-- Branding and Footer Note --> */}
+          <section className="row-span-2 mt-12 text-center">
+            <TextRevealAnimation text="Pocket Tracer" className="w-full text-[clamp(3rem,12.1vw,15rem)]" />
+            <p className="h-0.5 bg-white"></p>
+            <p className="mt-4 text-lg">© 2025 Pocket Tracer | All rights reserved.</p>
+          </section>
+        </div>
+      </footer>
+
+
+
     </div>
   );
 }
