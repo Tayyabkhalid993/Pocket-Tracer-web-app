@@ -6,6 +6,12 @@ import Link from "next/link";
 import Silk from '@/components/silk-background';
 import Paragraph from "@/components/word-animation"
 import TimelineDemo from "../../features";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 
 export default function Home() {
@@ -118,13 +124,70 @@ export default function Home() {
 
 
       <section id="features" className="py-16 px-4 md:px-20 scroll-mt-24">
-      <TimelineDemo />
+        <TimelineDemo />
       </section>
 
 
 
 
-      {/* <div style={{position: 'relative', height: '250px'}}>
+
+
+
+
+
+
+      {/* FAQs */}
+
+
+      <section id="faqs" className="py-16 text-center px-4 md:px-20 scroll-mt-24">
+        <div>
+          <h2 className="text-3xl text-blue md:text-7xl mb-16">
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div className="max-w-2xl mx-auto space-y-6">
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Is Pocket Tracer really free?</AccordionTrigger>
+              <AccordionContent>
+                Yes! Pocket Tracer is 100% free forever with no hidden fees. We don’t even ask for your credit card.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>How is Pocket Tracer different from other finance apps?</AccordionTrigger>
+              <AccordionContent>
+                Unlike basic expense trackers, we generate professional accounting vouchers (CPV/CRV/BPV/BRV/JV) and advanced reports while remaining completely free.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Is my financial data secure?</AccordionTrigger>
+              <AccordionContent>
+                Absolutely. We use bank-grade encryption (AES-256) and never sell your data. You own all your information.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>Can I use Pocket Tracer on mobile?</AccordionTrigger>
+              <AccordionContent>
+                Yes! Our web app works perfectly on all devices. Mobile apps (iOS/Android) are coming soon!
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>Can I access reports in CSV?</AccordionTrigger>
+              <AccordionContent>
+                Yes, you can export all your reports in CSV format for easy integration with other tools or for offline use.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+
+
+
+
+
+{/* 
+      <div style={{position: 'relative', height: '250px', padding:"20px"}}>
   <TextPressure
     text="Join us!"
     flex={true}
