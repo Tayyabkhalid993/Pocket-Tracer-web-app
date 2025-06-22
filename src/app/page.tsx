@@ -75,13 +75,10 @@ export default function Home() {
           rootMargin="-100px"
           textAlign="center"
         /> */}
-
-        <TextEffectOne elementVisibilityAmount={0.1} lineHeight={1.2} text="Stop Guessing. Start Tracking."
-          className="text-7xl font-semibold text-center" />
-
-        <h1 className="text-7xl"></h1>
-        <p className="max-w-2xl mt-10 mb-5 text-xl">Stop guessing and start tracking with confidence. Pocket Tracer transforms your financial data into clear visuals and professional reports, so you always know where your money stands.</p>
-        <p className="font-bold bg-[#8480fd] text-[#fff] rounded px-2">No accounting degree required.</p>
+        
+        <TextRevealAnimation text="Stop Guessing. Start Tracking." className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-center uppercase"/>
+        <TextRevealAnimation text="Stop guessing and start tracking with confidence. Pocket Tracer transforms your financial data into clear visuals and professional reports, so you always know where your money stands." className="max-w-2xl mt-10 mb-5 text-xl leading-8"/>
+        <TextRevealAnimation text="No accounting degree required." className="font-extrabold bg-[#8480fd] text-[#fff] rounded py-1"/>
       </section>
 
 

@@ -6,7 +6,7 @@ import { CustomEase } from 'gsap/dist/CustomEase'
 gsap.registerPlugin(CustomEase)
 CustomEase.create('cubic-text', '0.25, 1, 0.5, 1')
 
-export const TextRevealAnimation = ({ text,className }: { text: string, className?:string }) => {
+export const TextRevealAnimation = ({ text, className }: { text: string, className?: string }) => {
   const heroInfiniteRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const animationRefs = useRef<GSAPTween[]>([])
@@ -103,7 +103,7 @@ export const TextRevealAnimation = ({ text,className }: { text: string, classNam
       }
       return (
         <span key={i} className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-          <span className="word-animation inline-block translate-y-full pb-1.5 pt-6 will-change-transform">
+          <span className="word-animation inline-block translate-y-full pb-1.5 md:pb-2.5 pt-6 will-change-transform">
             {word}
           </span>
         </span>
@@ -113,14 +113,14 @@ export const TextRevealAnimation = ({ text,className }: { text: string, classNam
 
   return (
     <div className={`pt-[10px] pb-[9px] lg:py-[18px] ${className || " "}`}>
-      <div 
+      <div
         ref={containerRef}
         className="h_container flex flex-col items-center px-2"
       >
         {lines.map((line, lineIndex) => (
-          <h1 
-            key={lineIndex} 
-            className={`h_title relative w-full text-center font-light uppercase leading-[90%] whitespace-pre-wrap`}
+          <h1
+            key={lineIndex}
+            className={`h_title relative w-full text-center leading-[inherit] whitespace-pre-wrap`}
           >
             {renderWords(line)}
           </h1>
