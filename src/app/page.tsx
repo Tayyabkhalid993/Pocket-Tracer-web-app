@@ -6,13 +6,22 @@ import Link from "next/link";
 import Silk from '@/components/silk-background';
 import Paragraph from "@/components/word-animation"
 import TimelineDemo from "../../features";
+import { TextRevealAnimation } from "@/components/text-reveal-animation";
+import { Menu } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-import { TextRevealAnimation } from "@/components/text-reveal-animation";
+} from "@/components/ui/accordion";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 
 export default function Home() {
@@ -37,7 +46,7 @@ export default function Home() {
       {/* Header */}
 
       <header>
-        <nav className="flex justify-between items-center w-full px-5 font-bold">
+        <nav className="justify-between items-center w-full px-5 font-bold hidden md:flex">
           <Link href={"/"}><Image src={"/PocketTracerWhite.png"} width={200} height={200} alt="Pocket Tracer Logo"></Image></Link>
           <div>
             <ul className="flex justify-center items-center gap-3">
@@ -53,6 +62,46 @@ export default function Home() {
             <button><Link className="underline-text" href={"/auth/sign-up"}>SignUp</Link></button>
           </div>
         </nav>
+
+
+
+
+      {/* Mobile NavBar */}
+
+      <Sheet>
+  <SheetTrigger className="md:"><Menu/></SheetTrigger>
+  <SheetContent>
+    <SheetHeader>
+      <SheetTitle>Are you absolutely sure?</SheetTitle>
+      <SheetDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </SheetDescription>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
+
+        <nav className="justify-between items-center w-full px-5 font-bold md:hidden">
+          <Link href={"/"}><Image src={"/PocketTracerWhite.png"} width={200} height={200} alt="Pocket Tracer Logo"></Image></Link>
+          <div>
+            <ul className="flex justify-center items-center gap-3">
+              <li><Link className="underline-text" href={"/"}>Home</Link></li>
+              <li><Link className="underline-text" href={"/#about"}>About</Link></li>
+              <li><Link className="underline-text" href={"/#features"}>Features</Link></li>
+              <li><Link className="underline-text" href={"/#faqs"}>FAQs</Link></li>
+              <li><Link className="underline-text" href={"/#contact"}>Contact</Link></li>
+            </ul>
+          </div>
+          <div className="flex justify-center gap-3">
+            <button><Link className="underline-text" href={"/auth/login"}>LogIn</Link></button>
+            <button><Link className="underline-text" href={"/auth/sign-up"}>SignUp</Link></button>
+          </div>
+        </nav>
+
+
+
+
+
       </header>
 
 
