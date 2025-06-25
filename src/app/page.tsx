@@ -22,6 +22,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { Header } from "@/components/header";
+import SmoothScroll from "./utils/smooth-scroll";
 
 
 export default function Home() {
@@ -29,6 +31,10 @@ export default function Home() {
 
   return (
     <div className="scroll-smooth">
+
+     {/* Smooth Scroll Component */}
+      <SmoothScroll />
+
 
       {/* background-animation */}
       <div className="absolute inset-0 z-[-1]">
@@ -45,64 +51,14 @@ export default function Home() {
 
       {/* Header */}
 
-      <header>
-        <nav className="justify-between items-center w-full px-5 font-bold hidden md:flex">
-          <Link href={"/"}><Image src={"/PocketTracerWhite.png"} width={200} height={200} alt="Pocket Tracer Logo"></Image></Link>
-          <div>
-            <ul className="flex justify-center items-center gap-3">
-              <li><Link className="underline-text" href={"/"}>Home</Link></li>
-              <li><Link className="underline-text" href={"/#about"}>About</Link></li>
-              <li><Link className="underline-text" href={"/#features"}>Features</Link></li>
-              <li><Link className="underline-text" href={"/#faqs"}>FAQs</Link></li>
-              <li><Link className="underline-text" href={"/#contact"}>Contact</Link></li>
-            </ul>
-          </div>
-          <div className="flex justify-center gap-3">
-            <button><Link className="underline-text" href={"/auth/login"}>LogIn</Link></button>
-            <button><Link className="underline-text" href={"/auth/sign-up"}>SignUp</Link></button>
-          </div>
-        </nav>
-
-
-
-
-      {/* Mobile NavBar */}
-
-      <Sheet>
-  <SheetTrigger className="md:"><Menu/></SheetTrigger>
-  <SheetContent>
-    <SheetHeader>
-      <SheetTitle>Are you absolutely sure?</SheetTitle>
-      <SheetDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </SheetDescription>
-    </SheetHeader>
-  </SheetContent>
-</Sheet>
-
-        <nav className="justify-between items-center w-full px-5 font-bold md:hidden">
-          <Link href={"/"}><Image src={"/PocketTracerWhite.png"} width={200} height={200} alt="Pocket Tracer Logo"></Image></Link>
-          <div>
-            <ul className="flex justify-center items-center gap-3">
-              <li><Link className="underline-text" href={"/"}>Home</Link></li>
-              <li><Link className="underline-text" href={"/#about"}>About</Link></li>
-              <li><Link className="underline-text" href={"/#features"}>Features</Link></li>
-              <li><Link className="underline-text" href={"/#faqs"}>FAQs</Link></li>
-              <li><Link className="underline-text" href={"/#contact"}>Contact</Link></li>
-            </ul>
-          </div>
-          <div className="flex justify-center gap-3">
-            <button><Link className="underline-text" href={"/auth/login"}>LogIn</Link></button>
-            <button><Link className="underline-text" href={"/auth/sign-up"}>SignUp</Link></button>
-          </div>
-        </nav>
+      <Header/>
 
 
 
 
 
-      </header>
+
+
 
 
 
@@ -124,10 +80,10 @@ export default function Home() {
           rootMargin="-100px"
           textAlign="center"
         /> */}
-        
-        <TextRevealAnimation text="Stop Guessing. Start Tracking." className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-center uppercase"/>
-        <TextRevealAnimation text="Stop guessing and start tracking with confidence. Pocket Tracer transforms your financial data into clear visuals and professional reports, so you always know where your money stands." className="max-w-2xl mt-10 mb-5 text-xl leading-8"/>
-        <TextRevealAnimation text="No accounting degree required." className="font-extrabold bg-[#8480fd] text-[#fff] rounded py-1"/>
+
+        <TextRevealAnimation text="Stop Guessing. Start Tracking." className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-center uppercase" />
+        <TextRevealAnimation text="Stop guessing and start tracking with confidence. Pocket Tracer transforms your financial data into clear visuals and professional reports, so you always know where your money stands." className="max-w-2xl mt-10 mb-5 text-xl leading-8" />
+        <TextRevealAnimation text="No accounting degree required." className="font-extrabold bg-[#8480fd] text-[#fff] rounded py-1" />
       </section>
 
 
