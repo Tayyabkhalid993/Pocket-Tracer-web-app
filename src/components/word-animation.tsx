@@ -26,7 +26,7 @@ export default function Paragraph({paragraph}: {paragraph: string}) {
   )
 }
 
-const Word = ({children, progress, range}: {children: string, progress: any, range: any}) => {
+const Word = ({children, progress, range}: {children: string, progress: import("framer-motion").MotionValue<number>, range: [number, number]}) => {
   const opacity = useTransform(progress, range, [0, 1])
   return (
     <span className="relative inline-block mx-1">
