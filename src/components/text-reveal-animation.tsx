@@ -38,8 +38,6 @@ export const TextRevealAnimation = ({ text, className }: { text: string, classNa
     const titles = containerRef.current?.querySelectorAll('.h_title')
     if (!titles) return
 
-    const tl = gsap.timeline({ defaults: { duration: 1 } })
-
     titles.forEach((title, index) => {
       const el = title.querySelectorAll('.word-animation')
       const delay = index * 0.08

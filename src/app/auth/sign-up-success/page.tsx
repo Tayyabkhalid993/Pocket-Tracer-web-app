@@ -1,32 +1,7 @@
 // app/signup/success/page.tsx
-'use client'; // Required for interactivity
-
-import { CheckCircle2, RefreshCw, ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
-import { createClient } from "../../../lib/client";
-import { toast } from "sonner"; // or 'react-hot-toast'
+import { CheckCircle2} from "lucide-react";
 
 export default function SignupSuccess() {
-  const [isResending, setIsResending] = useState(false);
-  const supabase = createClient(); // Initialize Supabase client
-
-  const handleResend = async () => {
-    setIsResending(true);
-    try {
-      const { error } = await supabase.auth.resend({
-        type: 'signup',
-        email: 'user@example.com' // Replace with actual email from store/context
-      });
-      
-      if (error) throw error;
-      toast.success('Confirmation email sent!');
-    } catch (error) {
-      toast.error('Failed to resend. Please try again.');
-    } finally {
-      setIsResending(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">

@@ -205,7 +205,7 @@ export default function Home() {
           {/* <!-- Intro Message --> */}
           <section aria-labelledby="footer-message">
             <h2 id="footer-message" className="sr-only">Footer Message</h2>
-            <p className="text-center text-[clamp(2rem,6vw,8rem)]">Your wallet's new best friend.</p>
+            <p className="text-center text-[clamp(2rem,6vw,8rem)]">Your wallet&apos;s new best friend.</p>
           </section>
 
           {/* <!-- Navigation Columns --> */}
