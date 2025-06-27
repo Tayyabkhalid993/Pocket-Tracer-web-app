@@ -24,7 +24,7 @@ export default function SignupSuccess() {
             </h2>
             
             <p className="mt-3 text-gray-600 text-center">
-              We've sent a confirmation link to your email. 
+              We&apos;ve sent a confirmation link to your email. 
               <span className="block font-medium text-blue-600 mt-1">
                 Verify to unlock full access.
               </span>
