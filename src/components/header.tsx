@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from '@/components/ui/sheet';
 
 type ScrollLinkProps = {
   href: string;
@@ -50,9 +50,6 @@ export const Header = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const pathname = usePathname();
 
-  // Debug pathname
-  console.log('Current pathname:', pathname);
-
   // Normalize pathname to handle trailing slashes or query params
   const normalizedPathname = pathname.split('?')[0].replace(/\/$/, '');
   const isWhiteBackgroundPage = ['/auth/login', '/auth/sign-up'].includes(normalizedPathname);
@@ -72,9 +69,9 @@ export const Header = () => {
     setIsSheetOpen(false);
   };
 
-  // Conditional text color
-  const textClass = isWhiteBackgroundPage ? 'text-gray-900' : 'text-white';
-  const hoverClass = isWhiteBackgroundPage ? 'hover:text-gray-600' : 'hover:text-gray-300';
+  // Conditional text color classes with !important to ensure they override other styles
+  const textClass = isWhiteBackgroundPage ? '!text-gray-900' : '!text-white';
+  const hoverClass = isWhiteBackgroundPage ? 'hover:!text-gray-600' : 'hover:!text-gray-300';
 
   // Conditional logo
   const logoSrc = isWhiteBackgroundPage ? '/PocketTracerDark.png' : '/PocketTracerWhite.png';
@@ -83,7 +80,11 @@ export const Header = () => {
   const menuColor = isWhiteBackgroundPage ? '#000' : '#fff';
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'} backdrop-blur-lg bg-white/10 border-b border-white/10 shadow-sm`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        visible ? 'translate-y-0' : '-translate-y-full'
+      } backdrop-blur-lg bg-white/10 border-b border-white/10 shadow-sm`}
+    >
       {/* Desktop Navigation */}
       <nav className="justify-between items-center w-full px-5 font-bold hidden md:flex">
         <Link href="/">
@@ -128,46 +129,46 @@ export const Header = () => {
         <Link href="/">
           <Image src={logoSrc} width={200} height={200} alt="Pocket Tracer Logo" />
         </Link>
-        
+
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
             <button aria-label="Open menu">
               <Menu color={menuColor} />
             </button>
           </SheetTrigger>
-          <SheetContent className={`bg-custom-gradient ${textClass}`}>
+          <SheetContent className="bg-custom-gradient text-white">
             <SheetHeader className="flex flex-col justify-between h-full">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div>
                 <ul className="justify-center flex flex-col gap-6 mt-6">
                   <li>
-                    <ScrollLink href="/" className={`underline-text ${hoverClass}`} closeSheet={closeSheet}>
-                      <SheetDescription className={textClass}>Home</SheetDescription>
+                    <ScrollLink href="/" className="underline-text hover:text-gray-300" closeSheet={closeSheet}>
+                      <SheetDescription className="text-white">Home</SheetDescription>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="/#about" className={`underline-text ${hoverClass}`} closeSheet={closeSheet}>
-                      <SheetDescription className={textClass}>About</SheetDescription>
+                    <ScrollLink href="/#about" className="underline-text hover:text-gray-300" closeSheet={closeSheet}>
+                      <SheetDescription className="text-white">About</SheetDescription>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="/#features" className={`underline-text ${hoverClass}`} closeSheet={closeSheet}>
-                      <SheetDescription className={textClass}>Features</SheetDescription>
+                    <ScrollLink href="/#features" className="underline-text hover:text-gray-300" closeSheet={closeSheet}>
+                      <SheetDescription className="text-white">Features</SheetDescription>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="/#faqs" className={`underline-text ${hoverClass}`} closeSheet={closeSheet}>
-                      <SheetDescription className={textClass}>FAQs</SheetDescription>
-                        </ScrollLink >
-                    </li>
-                  </ul>
+                    <ScrollLink href="/#faqs" className="underline-text hover:text-gray-300" closeSheet={closeSheet}>
+                      <SheetDescription className="text-white">FAQs</SheetDescription>
+                    </ScrollLink>
+                  </li>
+                </ul>
               </div>
               <div className="flex flex-col gap-6 mb-6">
-                <Link className={`underline-text ${hoverClass}`} href="/auth/login" onClick={closeSheet}>
-                  <SheetDescription className={textClass}>Login</SheetDescription>
+                <Link className="underline-text hover:text-gray-300" href="/auth/login" onClick={closeSheet}>
+                  <SheetDescription className="text-white">Login</SheetDescription>
                 </Link>
-                <Link className={`underline-text ${hoverClass}`} href="/auth/sign-up" onClick={closeSheet}>
-                  <SheetDescription className={textClass}>SignUp</SheetDescription>
+                <Link className="underline-text hover:text-gray-300" href="/auth/sign-up" onClick={closeSheet}>
+                  <SheetDescription className="text-white">SignUp</SheetDescription>
                 </Link>
               </div>
             </SheetHeader>

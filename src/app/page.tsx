@@ -1,40 +1,22 @@
-import TextPressure from "@/components/pressure-text";
 import Image from "next/image";
-import SplitText from "@/components/split-text";
-import { TextEffectOne } from 'react-text-animate'
 import Link from "next/link";
 import Silk from '@/components/silk-background';
 import Paragraph from "@/components/word-animation"
 import TimelineDemo from "../../features";
 import { TextRevealAnimation } from "@/components/text-reveal-animation";
-import { Menu } from 'lucide-react';
+import MobileNavbar from "@/components/mobile-navbar";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
-import { Header } from "@/components/header";
-import SmoothScroll from "./utils/smooth-scroll";
-
 
 export default function Home() {
 
 
   return (
     <div className="scroll-smooth">
-
-     {/* Smooth Scroll Component */}
-      <SmoothScroll />
-
 
       {/* background-animation */}
       <div className="absolute inset-0 z-[-1]">
@@ -51,7 +33,32 @@ export default function Home() {
 
       {/* Header */}
 
-      <Header/>
+      <header className=" sticky top-0 backdrop-blur-lg z-50 mix-blend-difference">
+    {/* Desktop Navbar */}
+<nav className="hidden md:flex justify-between items-center w-full px-5 font-medium">
+          <Link href={"/"}><Image src={"/PocketTracerWhite.png"} width={200} height={200} alt="Pocket Tracer Logo"></Image></Link>
+          <div>
+            <ul className="flex justify-center items-center gap-3">
+              <li><Link className="underline-text" href={"/"}>Home</Link></li>
+              <li><Link className="underline-text" href={"/#about"}>About</Link></li>
+              <li><Link className="underline-text" href={"/#features"}>Features</Link></li>
+              <li><Link className="underline-text" href={"/#faqs"}>FAQs</Link></li>
+            </ul>
+          </div>
+          <div className="flex justify-center gap-3">
+            <button><Link className="underline-text" href={"/auth/login"}>LogIn</Link></button>
+            <button><Link className="underline-text" href={"/auth/sign-up"}>SignUp</Link></button>
+          </div>
+        </nav>
+
+
+
+
+
+
+        {/* Mobile NavBar */}
+         <MobileNavbar />
+      </header>
 
 
 
@@ -67,19 +74,6 @@ export default function Home() {
       <section className="flex flex-col justify-center items-center h-screen text-center text-white">
 
 
-        {/* <SplitText
-          text="Stop Guessing. Start Tracking."
-          className="text-7xl font-semibold text-center pb-4"
-          delay={400}
-          duration={0.3}
-          ease="power3.out"
-          splitType="words"
-          from={{ opacity: 0, y: 40 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="-100px"
-          textAlign="center"
-        /> */}
 
         <TextRevealAnimation text="Stop Guessing. Start Tracking." className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-center uppercase" />
         <TextRevealAnimation text="Stop guessing and start tracking with confidence. Pocket Tracer transforms your financial data into clear visuals and professional reports, so you always know where your money stands." className="max-w-2xl mt-10 mb-5 text-xl leading-8" />
@@ -182,7 +176,7 @@ export default function Home() {
             </AccordionItem>
           </Accordion>
         </div>
-        {/* <div style={{position: 'relative', height: '250px', padding:"20px"}} className="mx-auto mt-10 max-w-7xl">
+        {/* <div style={{position: 'relative', height: '250px', padding:"10px"}} className="mx-auto mt-10 max-w-7xl">
   <TextPressure
     text="Join us!"
     flex={true}
