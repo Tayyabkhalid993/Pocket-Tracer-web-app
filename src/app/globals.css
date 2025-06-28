@@ -31,7 +31,6 @@ html{
   transform-origin: left;
 }
 
-
 /* Lenis */
 
 html.lenis,
@@ -57,12 +56,6 @@ html.lenis body {
   transition-behavior: allow-discrete;
 }
 
-
-
-
-
-
-
 .text-blue {
     color: var(--lite-blue);
   }
@@ -73,7 +66,7 @@ html.lenis body {
   .bg-custom-gradient {
     background: linear-gradient(175deg, var(--lite-blue) 0%, var(--dark-blue) 100%);
   }
-  
+
   .bg-radial-gradient {
     background: radial-gradient(circle, #f5f7fa 0%, #c3cfe2 100%);
   }
@@ -105,7 +98,6 @@ body {
   font-weight: 700;
   font-style: normal;
   font-display: swap;}
-
 
 @theme inline {
   --color-background: var(--background);
