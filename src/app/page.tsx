@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Silk from '@/components/silk-background';
 import Paragraph from "@/components/word-animation"
-import TimelineDemo from "../../features";
+import TimelineDemo from "../components/features";
 import { TextRevealAnimation } from "@/components/text-reveal-animation";
 import MobileNavbar from "@/components/mobile-navbar";
 import {

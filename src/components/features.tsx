@@ -8,7 +8,7 @@ export default function TimelineDemo() {
       content: (
         <div>
             <span className="md:text-3xl font-medium lg:4xl"> Real world accounting with ease</span>
-          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc list-inside">
+          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc">
             <li className="py-2 md:py-3">Supports 5 voucher types: CPV, CRV, BPV, BRV, JV</li>
             <li className="py-2 md:py-3">Organized voucher entry: Quickly add and review transaction records</li>
             <li className="py-2 md:py-3">Date-wise filtering: Find any voucher in seconds</li>
@@ -52,7 +52,7 @@ export default function TimelineDemo() {
       content: (
         <div>
             <span className="md:text-3xl font-medium lg:4xl">Understand your finances at a glance.</span>
-          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc list-inside">
+          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc">
             <li className="py-2 md:py-3">Income vs Expense graphs: Clear comparisons</li>
             <li className="py-2 md:py-3">Pie charts for category insights: Where is your money going?</li>
             <li className="py-2 md:py-3">Trends over time: See how spending evolves</li>
@@ -66,7 +66,7 @@ export default function TimelineDemo() {
       content: (
         <div>
             <span className="md:text-3xl font-medium lg:4xl">Get professional insights instantly.</span>
-          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc list-inside">
+          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc">
             <li className="py-2 md:py-3">Custom date range reports: View by month, quarter, or year</li>
             <li className="py-2 md:py-3">Separate income & expense reports</li>
             <li className="py-2 md:py-3">Category-wise breakdown: Food, travel, bills, etc.</li>
@@ -80,7 +80,7 @@ export default function TimelineDemo() {
       content: (
         <div>
             <span className="md:text-3xl font-medium lg:4xl">No hidden fees — just value.</span>
-          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc list-inside">
+          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc">
             <li className="py-2 md:py-3">Unlimited entries</li>
             <li className="py-2 md:py-3">Full feature access — nothing locked</li>
             <li className="py-2 md:py-3">No payment info required</li>
@@ -94,7 +94,7 @@ export default function TimelineDemo() {
       content: (
         <div>
             <span className="md:text-3xl font-medium lg:4xl">Your data, your control.</span>
-          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc list-inside">
+          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc">
             <li className="py-2 md:py-3">No selling of user data</li>
             <li className="py-2 md:py-3">Secured</li>
             <li className="py-2 md:py-3">Login-protected dashboard</li>
@@ -107,7 +107,7 @@ export default function TimelineDemo() {
       content: (
         <div>
             <span className="md:text-3xl font-medium lg:4xl">Built for real people — not accountants only.</span>
-          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc list-inside">
+          <ul className="mb-8 p-4 text-gray-700 md:text-2xl dark:text-neutral-200 list-disc">
             <li className="py-2 md:py-3">Clean, minimal interface</li>
             <li className="py-2 md:py-3">Mobile-first responsive design</li>
             <li className="py-2 md:py-3">No complex settings or jargon</li>
